@@ -1,0 +1,7 @@
+{
+  "name": "johnathon-sperandio.github.io",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve"
+  }
+}
