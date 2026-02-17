@@ -1,0 +1,14 @@
+---
+description: State which AI model is being used before generating a response
+alwaysApply: true
+---
+
+# State Model Before Response
+
+At the start of each response, briefly state which AI model is being used.
+
+Example:
+- "Using model: [model name]. …"
+- Or one short line before the main answer so the user knows the agent identity.
+
+Keep it to one line; then proceed with the full response.

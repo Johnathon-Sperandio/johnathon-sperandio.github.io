@@ -1,0 +1,33 @@
+---
+description: Append model, mode, and prompt to AIprompts.md with separators between prompts
+alwaysApply: true
+---
+
+# Append to AIprompts.md
+
+After each response, append the following to `AIprompts.md`:
+
+1. **Separator**: Use the project’s separator line:
+   ```
+   -----------------------------------------------------------------------------------------------------
+   ```
+
+2. **Block to append** (in order):
+   - **Model**: The AI model name printed first in the response
+   - **Mode**: The actual session/mode for this response. Infer from context: if the system says "DEBUG MODE" or "You are now in **DEBUG MODE**", use **Debug**. If in normal chat (no Composer/Agent panel), use **Ask**. Use **Agent** only when the response is from Composer/Agent mode without Debug or Plan. Do not default to "Agent"; use the mode indicated in the conversation (e.g. Agent, Plan, Debug, Ask).
+   - **Prompt**: The user’s prompt or question that triggered the response
+
+3. Add a blank line after the prompt text, then the next separator when adding another entry.
+
+Example format (use actual mode: Agent, Plan, Debug, Ask —do not default to Agent):
+```
+-----------------------------------------------------------------------------------------------------
+
+Model: [model name]
+Mode: [actual mode from context, e.g. Agent | Plan | Debug | Ask]
+Prompt: [user's prompt text]
+
+-----------------------------------------------------------------------------------------------------
+```
+
+Preserve existing content in `AIprompts.md`; only append new blocks with the separator between them.
